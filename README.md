@@ -40,5 +40,5 @@ any UNIX, or whatever:
 nc 127.0.0.1 8080 > /dev/null # Set YOUR IP and port.
 ```
 
-Multiple simultaneous connections are possible, each connection create two more
-threads.
+Multiple simultaneous connections are possible, each connection creates two
+more threads.

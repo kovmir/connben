@@ -34,10 +34,13 @@ connben
 ```
 
 Then connect to `connben` server with netcat, which is present on pretty much
-any UNIX, or whatever:
+any UNIX, or whatever (be sure to specify the right IP and port):
 
 ```bash
-nc 127.0.0.1 8080 > /dev/null # Set YOUR IP and port.
+# Redirect the output to /dev/null to test bandwidth.
+nc 127.0.0.1 8080 > /dev/null
+# Or redirect to a file to test network along with disk I/O.
+nc 127.0.0.1 8080 > /some/directory/file.txt
 ```
 
 Multiple simultaneous connections are possible, each connection creates two

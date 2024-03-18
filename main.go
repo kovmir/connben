@@ -7,7 +7,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/bubbles/spinner"
 	tea "github.com/charmbracelet/bubbletea"
 )
 
@@ -26,7 +25,6 @@ type bench struct {
 
 // Bubbletea model.
 type model struct {
-	spinner spinner.Model
 	benches []bench
 }
 
@@ -156,7 +154,6 @@ func main() {
 	}
 
 	tui := tea.NewProgram(model{
-		spinner: spinner.New(),
 		benches: []bench{},
 	})
 

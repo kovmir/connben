@@ -60,8 +60,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 func (m model) View() string {
 	var status strings.Builder
 	// Status bar.
-	status.WriteString("`q` - quit, `h` - hide disconnected.\n")
-	status.WriteString(fmt.Sprintf("[ Listening on %s | Chunk size %d ]\n",
+	status.WriteString(fmt.Sprintf("[ Listening on %s | Chunk size %d ]\n\n",
 		listenAddr, bufSize))
 	// Clients...
 	for _, v := range m.benches {

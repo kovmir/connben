@@ -5,7 +5,6 @@ Minimalist TUI network connection benchmarking tool.
 # PREVIEW
 
 ```
-`q` - quit, `h` - hide disconnected.
 [ Listening on :8080 | Chunk size 1024 ]
 
 X ->127.0.0.1:52488 224766580_B/s 214.35_MiB/s
@@ -16,7 +15,7 @@ X ->192.168.2.1:48452 118903557_B/s 113.40_MiB/s
 ->127.0.0.1:52450 79970780_B/s 76.27_MiB/s
 ```
 
-Disconnected clients are prefixed with `X`.
+Disconnected clients are prefixed with `X`, press `h` to hide them.
 
 # INSTALL
 
@@ -45,3 +44,8 @@ nc 127.0.0.1 8080 > /some/directory/file.txt
 
 Multiple simultaneous connections are possible, each connection creates two
 more threads.
+
+Keymaps:
+
+* `q` - quit
+* `h` - hide inactive connections (marked with `X`)
